@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+void sifrelemesezar (char *ptr, int key )
+{
+    while (*ptr!='\0')
+    {
+        *ptr=*ptr+key;
+        ptr++;
+    }
+    
+    
+}
+
+
+int main()
+{
+   char metin[100];
+   int key = 3;
+   
+   printf("Şifreleyeceğiniz metni gir: "); scanf(" %[^\n]s",metin);
+   printf("Key: "); scanf(" %d",&key);
+
+   sifrelemesezar(metin,key);
+   printf("\nSifrelenmiş metin: %s \n", metin);
+   
+
+
+
+
+    return 0;
+}
